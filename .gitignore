@@ -1,0 +1,13 @@
+
+
+# Local state and material excluded from portfolio publication
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+private-course-materials/
+*.class
+
+# Generated output of the public synthetic example
+ambulance_call_priority.csv

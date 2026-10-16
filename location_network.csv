@@ -1,0 +1,7 @@
+Start,End,Distance,Travel Time,Traffic Delay
+Node A,Node B,1,2,0
+Node B,Node A,1,2,0
+Node B,Node C,1,2,1
+Node C,Node B,1,2,1
+Node C,Node D,1,2,0
+Node D,Node C,1,2,0

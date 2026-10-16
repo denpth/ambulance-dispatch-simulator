@@ -1,0 +1,113 @@
+{
+  "evaluation_date": "2026-10-15",
+  "seed": 42,
+  "python": "3.12.14",
+  "system": "Darwin",
+  "machine": "arm64",
+  "repeats": 5,
+  "workloads": [
+    {
+      "nodes": 50,
+      "edges": 190,
+      "candidate_ambulances": 4,
+      "incidents": 10,
+      "route_queries": 40,
+      "equal_shortest_path_costs": true,
+      "timing_ms": {
+        "bellman_ford": {
+          "runs": [
+            1.3852498959749937,
+            1.3901670463383198,
+            1.3769578654319048,
+            1.3765841722488403,
+            1.3915419112890959
+          ],
+          "median": 1.3852498959749937,
+          "minimum": 1.3765841722488403,
+          "maximum": 1.3915419112890959
+        },
+        "dijkstra": {
+          "runs": [
+            0.4316670820116997,
+            0.41675008833408356,
+            0.4177500959485769,
+            0.4140830133110285,
+            0.41816593147814274
+          ],
+          "median": 0.4177500959485769,
+          "minimum": 0.4140830133110285,
+          "maximum": 0.4316670820116997
+        }
+      }
+    },
+    {
+      "nodes": 150,
+      "edges": 590,
+      "candidate_ambulances": 8,
+      "incidents": 20,
+      "route_queries": 160,
+      "equal_shortest_path_costs": true,
+      "timing_ms": {
+        "bellman_ford": {
+          "runs": [
+            22.680834168568254,
+            22.51762500964105,
+            21.985833067446947,
+            22.445375099778175,
+            22.313500056043267
+          ],
+          "median": 22.445375099778175,
+          "minimum": 21.985833067446947,
+          "maximum": 22.680834168568254
+        },
+        "dijkstra": {
+          "runs": [
+            7.338459137827158,
+            7.120582973584533,
+            7.282000035047531,
+            7.20520899631083,
+            7.156166015192866
+          ],
+          "median": 7.20520899631083,
+          "minimum": 7.120582973584533,
+          "maximum": 7.338459137827158
+        }
+      }
+    },
+    {
+      "nodes": 400,
+      "edges": 1593,
+      "candidate_ambulances": 12,
+      "incidents": 30,
+      "route_queries": 360,
+      "equal_shortest_path_costs": true,
+      "timing_ms": {
+        "bellman_ford": {
+          "runs": [
+            166.57866607420146,
+            168.19408303126693,
+            165.34945787861943,
+            165.6183328013867,
+            166.50912491604686
+          ],
+          "median": 166.50912491604686,
+          "minimum": 165.34945787861943,
+          "maximum": 168.19408303126693
+        },
+        "dijkstra": {
+          "runs": [
+            46.50074988603592,
+            46.42987507395446,
+            46.769917011260986,
+            46.35133291594684,
+            46.72133387066424
+          ],
+          "median": 46.50074988603592,
+          "minimum": 46.35133291594684,
+          "maximum": 46.769917011260986
+        }
+      }
+    }
+  ],
+  "scope": "Synthetic nonnegative graphs. Timing covers complete route-function calls, including Dijkstra weight validation. Candidate ambulance and incident counts only determine query volume; no priority, availability, reassignment, patient outcome, or end-to-end dispatch policy is evaluated. Equal cost does not require equal paths when ties exist. Warm local timing is not a production latency guarantee."
+}
